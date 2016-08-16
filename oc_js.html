@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>iOS上webView与JS交互的之oc调用js的demo</title>
+    <script type="text/javascript">
+        function show() {
+            var zhText = "测试百度文字转语音接口 - 卡卡测速网 www.webkaka.com";
+            zhText = encodeURI(zhText);
+            document.write("<audio autoplay=\"autoplay\">");
+            document.write("<source src=\"http://tts.baidu.com/text2audio?lan=zh&amp;ie=UTF-8&amp;spd=2&amp;text="+ zhText +"\" type=\"audio/mpeg\">");
+            document.write("<embed height=\"0\" width=\"0\" src=\"http://tts.baidu.com/text2audio?lan=zh&amp;ie=UTF-8&amp;spd=2&amp;text="+ zhText +"\">");
+            document.write("</audio>");
+        }
+    </script>
+</head>
+<!--网页具体内容-->
+<body>
+<br>下面是网页<br/>
+<button style = "background: yellow; height: 150px; width: 350px;" onclick = "show();">点击按钮js调用oc</button>
+</body>
+</html>

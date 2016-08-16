@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>iOS上webView与JS交互的之oc调用js的demo</title>
+    <script>
+        var message = "oc"
+        function show()
+        {
+            alert('js调用了oc的代码');
+        }
+        function showTitle()
+        {
+            alert(document.title);
+        }
+        function showTitleMessage(message)
+        {
+            alert(message);
+        }
+        function repost()
+        {
+//            原标签打开网页
+//            location.href = "http://www.iosxxx.com";
+//            新标签打开网页
+            window.open("http://www.iosxxx.com");
+        }
+        function sum()
+        {
+            return 1 + 1;
+        }
+        function btnClick()
+        {
+            bdgt("hello world");
+            location.href = "xmg://callWithNumber_?15830654880";
+        }
+    </script>
+</head>
+<!--网页具体内容-->
+<body>
+<br>下面是网页<br/>
+<button style = "background: yellow; height: auto; width: auto;" onclick = "showTitleMessage(message);">点击按钮js调用oc</button>
+</body>
+
+</html>
